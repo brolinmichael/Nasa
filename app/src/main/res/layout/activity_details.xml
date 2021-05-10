@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splash_background"
+    tools:context=".view.activities.DetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:background="@color/splash_background">
+
+
+        <com.example.nasa.customviews.RobotoBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADOP Listing"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="13dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"/>
+
+         <ImageView
+             android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:layout_marginLeft="35dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_baseline_chevron_left_24">
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/white"
+        android:layout_below="@id/rlHeader">
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:scaleType="fitXY"/>
+
+        <com.example.nasa.customviews.RobotoBoldTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivImage"
+            android:layout_toLeftOf="@id/tvDate"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="26dp"
+            android:textColor="#2C2C2C"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"/>
+
+        <com.example.nasa.customviews.RobotoBoldTextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="#2C2C2C"
+            android:layout_marginTop="28dp"
+            android:layout_below="@id/ivImage"
+            android:textSize="15dp"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+            android:layout_below="@id/tvTitle">
+
+            <com.example.nasa.customviews.RobotoRegularTextView
+                android:id="@+id/tvDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:textSize="15dp"
+                android:layout_marginTop="25dp"
+                android:textColor="#2C2C2C"
+                android:justificationMode="inter_word"
+                android:layout_marginLeft="15dp"
+                android:paddingBottom="80dp"
+                android:layout_marginRight="11dp"/>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
